@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<title>Мой счётчик калорий</title>
+</head>
+
+<body>
+<h1>Счётчик калорий</h1>
+
+<form>
+	<div class="form-item">
+		<h2>Пол</h2>
+		<ul class="switcher">
+			<li class="switcher-item">
+				<input id="male" type="radio" name="gender" value="male" checked required>
+				<label for="male">Мужчина</label>
+			</li>
+			<li class="switcher-item">
+				<input id="female" type="radio" name="gender" value="female" required>
+				<label for="female">Женщина</label>
+			</li>
+		</ul>
+	</div>
+
+	<div class="second_part">
+		<div class="second_item">
+		<label for="age">Возраст</label>	
+		<span>лет</span>
+		<input id="age" type="text" name="fiz_par" placeholder="0" maxlength="3">
+		</div>
+
+		<div class="second_item">
+		<label for="height">Рост</label>	
+		<span>см</span>
+		<input id="height" type="text" name="fiz_par" placeholder="0" maxlength="3">
+		</div>
+
+		<div class="second_item">
+		<label for="weight">Вес</label>	
+		<span>кг</span>
+		<input id="weight" type="text" name="fiz_par" placeholder="0" maxlength="3">
+		</div>
+	</div>
+
+	<div class="third_part">
+		<h2>Физическая активность</h2>
+		<ul>
+			<li>
+				<input value="min" id="min" type="radio" name="fiz_activity"checked>
+				<label for="min">Минимальная</label>
+				<p>Сидячая работа и нет физических нагрузок</p>
+			</li>
+			<li>
+				<input value="low" id="low" type="radio" name="fiz_activity">
+				<label for="low">Низкая</label>
+				<p>Редкие, нерегулярные тренировки, активность в быту</p>
+			</li>
+			<li>
+				<input value="mid" id="mid" type="radio" name="fiz_activity">
+				<label for="mid">Средняя</label>
+				<p>Тренировки 3-5 раз в неделю</p>
+			</li>
+			<li>
+				<input value="high" id="high" type="radio" name="fiz_activity">
+				<label for="high">Высокая</label>
+				<p>Тренировки 6-7 раз в неделю</p>
+			</li>
+			<li>
+				<input value="hard" id="hard" type="radio" name="fiz_activity">
+				<label for="hard">Очень высокая</label>
+				<p>Больше 6 тренировок в неделю и физическая работа</p>
+			</li>
+		</ul>
+	</div>
+
+	<div class="fourth_part">
+		<button type="button" class="submit" disabled>Рассчитать</button>
+		<button type="button" class="reset" disabled>
+<svg width="24" height="24" fill="#FD3636" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.414 12l5.293-5.293a.999.999 0 10-1.414-1.414L12 10.586 6.707 5.293a.999.999 0 10-1.414 1.414L10.586 12l-5.293 5.293a.999.999 0 101.414 1.414L12 13.414l5.293 5.293a.997.997 0 001.414 0 .999.999 0 000-1.414L13.414 12z"></path></svg>
+		Очистить поля</button>
+	</div>
+</form>
+
+<div class="result">
+	<h2>Ваша норма калорий</h2>
+	<ul>
+		<li>
+			<h3 class="first"></h3><span>ккал</span>
+			<p>поддержание веса</p>
+		</li>
+
+		<li>
+			<h3 class="second"></h3><span>ккал</span>
+			<p>снижение веса</p>
+		</li>
+
+		<li>
+			<h3 class="third"></h3><span>ккал</span>
+			<p>набор веса</p>
+		</li>
+	</ul>
+</div>
+<script type="text/javascript"src="index.js"></script>
+</body>
+</html>
